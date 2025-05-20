@@ -474,7 +474,6 @@ def GetRepositories(configData: list) -> list:
         elif line.startswith("clean=") and "False" in line:
             uri = line.split(' ')[2]
             repository = [x for x in repositories if x.Uri == uri]
-            print(repository[0].Uri)
             repository[0].Clean = False
             logger.debug(f"Not cleaning {uri}")
 
