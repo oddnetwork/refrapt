@@ -1,0 +1,14 @@
+services:
+  squid:
+    build:
+      context: ./Docker/squid
+      dockerfile: Dockerfile
+
+  refrapt:
+    build:
+      context: ./Docker/refrapt
+      dockerfile: Dockerfile
+    volumes:
+      - ./:/app
+    links:
+      - "squid"
