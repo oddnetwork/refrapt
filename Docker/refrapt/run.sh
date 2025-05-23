@@ -3,7 +3,8 @@ set -e
 
 
 cd /app
-rm -rf ./refrapt/__pycache__ ./Refrapt.egg-info ./build
+rm -vrf ./refrapt/__pycache__ ./refrapt/var ./Refrapt.egg-info ./build
+echo "---"
 python3 -m pip install --break-system-packages .
 #clear
 echo "---"
